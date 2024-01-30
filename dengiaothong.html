@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đèn giao thông</title>
+    <style>
+        .td {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        button {
+            margin: 5px;
+        }
+        .khung {
+            margin: 0 auto;
+            width: 150px;
+            height: 320px;
+            padding: 70px;
+            background-color: #152323;
+        }
+        .hinhtron {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            background-color: #fff; 
+            border-radius: 100px;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Đèn tín hiệu giao thông</h1></center>
+    <div class="td">
+        <button type="button" onclick="red()">red</button>
+        <button type="button" onclick="yellow()">yellow</button>
+        <button type="button" onclick="green()">green</button>  
+    </div>
+    <div class="khung">
+        <div id="dendo" class="hinhtron"></div>
+        <div id="denvang" class="hinhtron"></div>
+        <div id="denxanh" class="hinhtron"></div>
+    </div>
+    <script>
+        var maudo = document.getElementById("dendo");
+        var mauvang = document.getElementById("denvang");
+        var mauxanh = document.getElementById("denxanh");
+        
+        function red() {
+            clearLights();
+            maudo.style.backgroundColor = "red"; 
+        }
+        function green() {
+            clearLights();
+            mauxanh.style.backgroundColor = "green"; 
+        }
+        function yellow() {
+            clearLights();
+            mauvang.style.backgroundColor = "yellow";
+        }
+        function clearLights() {
+            document.getElementById('dendo').style.backgroundColor = "#fff"; 
+            document.getElementById('denvang').style.backgroundColor = "#fff"; 
+            document.getElementById('denxanh').style.backgroundColor = "#fff"; 
+        }
+    </script>
+</body>
+</html>
